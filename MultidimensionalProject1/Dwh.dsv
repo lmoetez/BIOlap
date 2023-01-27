@@ -1,0 +1,244 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="1fbf51d1-5e57-4a6f-9e49-a0b8c8fb6416" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dwh</ID>
+  <Name>Dwh</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:NameMatchingCriteria</Name>
+      <Value>1</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Dwh</DataSourceID>
+  <Schema>
+    <xs:schema id="Dwh" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Dwh" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="02f017e4-e58d-4c4d-b135-9dfb86f62879">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_factRating" msprop:design-time-name="05fcb8ff-2c13-4751-8db8-86b9e20e188a" msprop:DbTableName="factRating" msprop:FriendlyName="factRating" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="serviceRating" msprop:design-time-name="3c6de1b4-a906-42af-9421-f29286b2dd5e" msprop:DbColumnName="serviceRating" msprop:FriendlyName="serviceRating" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="foodRating" msprop:design-time-name="f73e3248-8937-4e20-8fe2-16661183c9f9" msprop:DbColumnName="foodRating" msprop:FriendlyName="foodRating" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="id_dimClient" msprop:design-time-name="39a18d91-55ca-4352-8a96-e191cab49447" msprop:DbColumnName="id_dimClient" msprop:FriendlyName="id_dimClient" type="xs:int" minOccurs="0" />
+                  <xs:element name="id_dimrestaurant" msprop:design-time-name="832654ee-1674-43ba-a55d-196a3e3e64a9" msprop:DbColumnName="id_dimrestaurant" msprop:FriendlyName="id_dimrestaurant" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_factVisit" msprop:design-time-name="525f0e6e-23d5-492e-a190-93fe4cf22067" msprop:DbTableName="factVisit" msprop:FriendlyName="factVisit" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="nbrVisit" msprop:design-time-name="2f72e526-3689-404f-bb69-df2a37c7a352" msprop:DbColumnName="nbrVisit" msprop:FriendlyName="nbrVisit" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="id_dimClient" msprop:design-time-name="3f13ca96-84e9-4a3c-a2d7-79e62dc79850" msprop:DbColumnName="id_dimClient" msprop:FriendlyName="id_dimClient" type="xs:int" minOccurs="0" />
+                  <xs:element name="id_dimrestaurant" msprop:design-time-name="b53a2ac9-21de-4b11-92a4-c8e05365358e" msprop:DbColumnName="id_dimrestaurant" msprop:FriendlyName="id_dimrestaurant" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dimClient" msprop:design-time-name="52ecf7c4-9e37-4d5c-aa4f-6c37a19348b6" msprop:DbTableName="dimClient" msprop:FriendlyName="dimClient" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_dimClient" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="d6107e85-2335-40d7-b218-30feb593c2a5" msprop:DbColumnName="id_dimClient" msprop:FriendlyName="id_dimClient" type="xs:int" />
+                  <xs:element name="cltPayment" msprop:design-time-name="e22b8343-650d-4704-aa18-f80da20172cc" msprop:DbColumnName="cltPayment" msprop:FriendlyName="cltPayment" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="cltCuisine" msprop:design-time-name="4cddc969-bebf-49c8-83e3-e569e0f35063" msprop:DbColumnName="cltCuisine" msprop:FriendlyName="cltCuisine" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="cltID" msprop:design-time-name="3b506542-7c4a-4fcf-b31f-65292469c34e" msprop:DbColumnName="cltID" msprop:FriendlyName="cltID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="smoker" msprop:design-time-name="6fcd3347-5338-4f02-b437-ea1b5224ec63" msprop:DbColumnName="smoker" msprop:FriendlyName="smoker" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="dress_preference" msprop:design-time-name="728db483-598d-4eb0-a4a7-428dff45ffe2" msprop:DbColumnName="dress_preference" msprop:FriendlyName="dress_preference" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ambience" msprop:design-time-name="017d4732-7452-4405-bc4c-48916118022e" msprop:DbColumnName="ambience" msprop:FriendlyName="ambience" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="transport" msprop:design-time-name="e17bd06f-a364-4b03-8c04-e55ff8e64870" msprop:DbColumnName="transport" msprop:FriendlyName="transport" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="marital_status" msprop:design-time-name="942426e0-c099-447a-b932-7743c915bc75" msprop:DbColumnName="marital_status" msprop:FriendlyName="marital_status" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="birth_year" msprop:design-time-name="3291cee4-e615-403f-8928-97ae6eef7f59" msprop:DbColumnName="birth_year" msprop:FriendlyName="birth_year" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="interest" msprop:design-time-name="81da0399-205a-462d-b348-d02e2fe89115" msprop:DbColumnName="interest" msprop:FriendlyName="interest" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="personality" msprop:design-time-name="bc76b5f7-64a1-4170-b9ed-b94ce11c6bff" msprop:DbColumnName="personality" msprop:FriendlyName="personality" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="religion" msprop:design-time-name="ea239ce4-77db-46a2-8d74-39517c8c9d8d" msprop:DbColumnName="religion" msprop:FriendlyName="religion" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="budget" msprop:design-time-name="04b27cae-33d1-4a7a-a158-e4fd6cee4007" msprop:DbColumnName="budget" msprop:FriendlyName="budget" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dimRestaurant" msprop:design-time-name="c2187cdc-9a15-42cb-8cf5-6cc9609be0a3" msprop:DbTableName="dimRestaurant" msprop:FriendlyName="dimRestaurant" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_dimrestaurant" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="a2cc55a0-f871-409d-add1-3ff3d09a4629" msprop:DbColumnName="id_dimrestaurant" msprop:FriendlyName="id_dimrestaurant" type="xs:int" />
+                  <xs:element name="resID" msprop:design-time-name="e2dbf00d-3458-405b-916e-81b32568e893" msprop:DbColumnName="resID" msprop:FriendlyName="resID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="resCuisine" msprop:design-time-name="00d8ad5b-cba5-44c7-b0f8-bbe512502a95" msprop:DbColumnName="resCuisine" msprop:FriendlyName="resCuisine" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="resPayment" msprop:design-time-name="2f337744-d930-446d-80df-ab97ae5596b7" msprop:DbColumnName="resPayment" msprop:FriendlyName="resPayment" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="parking_lot" msprop:design-time-name="e0503ccd-b17c-42f3-ba2e-7e22154c6806" msprop:DbColumnName="parking_lot" msprop:FriendlyName="parking_lot" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dimClient" />
+          <xs:field xpath="id_dimClient" />
+        </xs:unique>
+        <xs:unique name="dbo_dimRestaurant_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dimRestaurant" />
+          <xs:field xpath="id_dimrestaurant" />
+        </xs:unique>
+      </xs:element>
+      <xs:annotation>
+        <xs:appinfo>
+          <msdata:Relationship name="factRating-dimClient" msdata:parent="dbo_dimClient" msdata:child="dbo_factRating" msdata:parentkey="id_dimClient" msdata:childkey="id_dimClient" />
+          <msdata:Relationship name="factRating-dimRestaurant" msdata:parent="dbo_dimRestaurant" msdata:child="dbo_factRating" msdata:parentkey="id_dimrestaurant" msdata:childkey="id_dimrestaurant" />
+          <msdata:Relationship name="factVisit-dimClient" msdata:parent="dbo_dimClient" msdata:child="dbo_factVisit" msdata:parentkey="id_dimClient" msdata:childkey="id_dimClient" />
+          <msdata:Relationship name="factVisit-dimRestaurant" msdata:parent="dbo_dimRestaurant" msdata:child="dbo_factVisit" msdata:parentkey="id_dimrestaurant" msdata:childkey="id_dimrestaurant" />
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:schema>
+    <Dwh xmlns="" />
+  </Schema>
+</DataSourceView>
